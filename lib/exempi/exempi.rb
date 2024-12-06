@@ -41,7 +41,7 @@ require 'ffi'
 
 module Exempi
   extend FFI::Library
-  ffi_lib 'exempi'
+  ffi_lib ['exempi', 'libexempi.so.8']
 
   # we redefine attach_function so we can wrap all of the C functions
   class << self
